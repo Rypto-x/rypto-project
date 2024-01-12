@@ -1,0 +1,193 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Rypto -X</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">Rypto</a>&nbsp; |&nbsp; RYPX price: <span id="currentPrice" style="color:yellow">0 Matic </span> 
+							
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-arrow-up" viewBox="0 0 16 16">
+								<path d="M8 15.5a.5.5 0 0 1-.5-.5V1.707L3.354 6.854a.5.5 0 0 1-.708-.708l5-5a.5.5 0 0 1 .708 0l5 5a.5.5 0 0 1-.708.708L8 1.707V15a.5.5 0 0 1-.5.5z"/>
+							  </svg>
+							
+							<svg id="arrow-up" style="display:none;	" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-arrow-down" viewBox="0 0 16 16">
+								<path d="M8 0a.5.5 0 0 1 .5.5V13.293l4.146-4.147a.5.5 0 0 1 .708.708l-5 5a.5.5 0 0 1-.708 0l-5-5a.5.5 0 0 1 .708-.708L7.5 13.293V.5a.5.5 0 0 1 1 0z"/>
+							  </svg>
+							  
+							  &nbsp; | &nbsp; Your Balance: <span id="balance" style="color:yellow">0 RYPX</span> 
+						</a></h1>
+						<h1></h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="index.html">Home</a></li>
+								<li><a href="rypto-x.html">Rypto -X</a></li>
+								<li id="loginNavItem"><a href="#" id="loginButton">Login</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2>Rypto -X Token</h2>
+								<p>  Operando 24/7 con IA en Bitcoin.Potencia tus Inversiones con el bot que nunca descansa.</p>
+								<!--
+								<article>
+									<a href="#" class="image"><img style="width:300px;height: 300px;"src="images/logo.png" alt="" /></a>
+									
+								</article>
+							-->
+							<div class="col-12"><span class="image fit"><img class="rotate-coin" style="width:300px;height: 300px; "src="images/logo.png" alt="" /></span></div>
+							<span id="loginMetamaskContainer"><a href="#" class="special" id="loginWithMetamask" >Login with Metamask</a>	</span>
+							<a href="#" id="addTokenMetamask" class="special">Add RYPX to Metamask</a>	
+						</div>
+						</header>
+
+						<!-- Content -->
+							<div class="wrapper">
+								<div class="inner">
+									<section>
+										<h3 class="major">Rypto -X Smart Contract Details</h3>
+										<div class="row">
+											<div class="col-6 col-12-medium">
+											
+												<ul class="alt">
+													<li>Contract Address: <span id="contractAddress"></span></li>
+													<li>Contract Balance: <span id="contractBalance"></span></li>
+													<li>Total Coins Emmited: <span id="totalCoinsEmitted"></span></li>
+													<li>Operation Window Active: <span id="getOperationalWindow"></span></li>
+												</ul>
+											</div>
+										
+										</div>
+										
+									</section>
+
+									<section>
+										<h3 class="major">Purchase Requests</h3>
+										<div class="table-wrapper">
+											<table id="purchaseRequestsTable">
+												<thead>
+													<tr>
+														<th>Address</th>
+														<th>Amount</th>
+														<th>Cancel</th>
+													</tr>
+												</thead>
+												<tbody>
+													
+												</tbody>
+											
+											</table>
+											<div class="row gtr-uniform">
+												<div class="col-6 col-12-medium">
+													
+													<input type="text"  placeholder="Enter amount in MATIC" id="purchaseAmount"  />
+												</div>
+												<div class="col-6 col-12-xsmall">
+													<a href="#" id="requestPurchase" class="button primary fit">Purchase RYPX</a>
+												</div>
+											</div>
+										</div>
+										</section>
+
+										<br><br><br>
+										<section>
+										<h3 class="major">Withdrawal Requests</h3>
+										<div class="table-wrapper">
+											<table id="withdrawalRequestsTable">
+												<thead>
+													<tr>
+														<th>Address</th>
+														<th>Amount</th>
+														<th>Cancel</th>
+													</tr>
+												</thead>
+												<tbody>
+													
+												</tbody>
+											
+											</table>
+											<div class="row gtr-uniform">
+												<div class="col-6 col-12-medium">
+													
+													<input id="withdrawalAmount" type="text" id="withdrawalAmount" placeholder="Enter amount in RYPX"  />
+												</div>
+												<div class="col-6 col-12-xsmall">
+													<a href="#"  id="requestWithdrawal" class="button primary fit">Withdrawal RYPX</a>
+												</div>
+											</div>
+										</div>
+										</section>
+										
+										<br><br><br>
+										
+										<label >Rypto -X evolution</label>
+										<div class="chart-container">
+											
+											<canvas id="priceChart"></canvas>
+										  </div>
+										  <br><br><br>
+									<section>
+									
+												<div class="col-12">
+													<label >Events Logs</label>
+													
+													<pre><code id="eventLog" ></code></pre>
+												</div>
+											
+											</div>
+										</form>
+									</section>
+
+
+								</div>
+							</div>
+
+					</section>
+
+				<!-- Footer -->
+					<section id="footer">
+
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  			<script src="https://cdn.jsdelivr.net/npm/web3@1.6.0/dist/web3.min.js"></script>
+  			<script type="module"src="app.js"></script>
+
+	</body>
+</html>
